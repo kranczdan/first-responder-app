@@ -22,7 +22,7 @@ const HelperDashboard = () => {
   }, []);
 
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:3001');
+    const ws = new WebSocket('wss://34.224.26.26:3001');
 
     ws.onmessage = async (event) => {
       const parsedMessage = JSON.parse(event.data);
