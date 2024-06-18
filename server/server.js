@@ -17,7 +17,7 @@ app.use(cors());
 
 // Kafka Consumer Setup
 const Consumer = kafka.Consumer;
-const client = new kafka.KafkaClient({ kafkaHost: 'http://34.224.26.26:29092' });
+const client = new kafka.KafkaClient({ kafkaHost: 'http://localhost:29092' });
 const producer = new kafka.Producer(client);
 
 producer.on('ready', function () {
@@ -92,7 +92,7 @@ wss.on('connection', function (ws) {
 // API-Route zum Abrufen der Benutzer
 app.get('/api/user', async (req, res) => {
   try {
-    const response = await axios.get('http://34.224.26.26:8090/user');
+    const response = await axios.get('http://localhost:8090/user');
     res.json(response.data);
   } catch (error) {
     console.error('Fehler beim Abrufen der Benutzer:', error);
@@ -103,7 +103,7 @@ app.get('/api/user', async (req, res) => {
 // API-Route zum Abrufen der Ereignisse
 app.get('/api/event', async (req, res) => {
   try {
-    const response = await axios.get('http://34.224.26.26:8090/event');
+    const response = await axios.get('http://localhost:8090/event');
     res.json(response.data);
   } catch (error) {
     console.error('Fehler beim Abrufen der Ereignisse:', error);
@@ -115,7 +115,7 @@ app.get('/api/event', async (req, res) => {
 app.post('/api/event', async (req, res) => {
   const { eventLong, eventLat, title, description, victimName } = req.body;
   try {
-    const response = await axios.post('http://34.224.26.26:8090/event', {
+    const response = await axios.post('http://localhost:8090/event', {
       eventLong,
       eventLat,
       title,
@@ -133,7 +133,7 @@ app.post('/api/event', async (req, res) => {
 app.post('/api/event/register', async (req, res) => {
   const { userLong, userLat, eventId, userId } = req.body;
   try {
-    const response = await axios.post('http://34.224.26.26:8090/event/register', {
+    const response = await axios.post('http://localhost:8090/event/register', {
       userLong,
       userLat,
       eventId,
@@ -193,7 +193,7 @@ app.post('/api/event/register', async (req, res) => {
 app.post('/api/user', async (req, res) => {
   const { firstname, lastname } = req.body;
   try {
-    const response = await axios.post('http://34.224.26.26:8090/user', {
+    const response = await axios.post('http://localhost:8090/user', {
       firstname,
       lastname,
     });
@@ -208,7 +208,7 @@ app.post('/api/user', async (req, res) => {
 app.get('/api/event/:id', async (req, res) => {
   const eventId = req.params.id;
   try {
-    const response = await axios.get(`http://34.224.26.26:8090/event/${eventId}`);
+    const response = await axios.get(`http://localhost:8090/event/${eventId}`);
     res.status(200).json(response.data);
   } catch (error) {
     console.error(`Fehler beim Abrufen der Event-Details für Event ${eventId}:`, error);
@@ -218,7 +218,7 @@ app.get('/api/event/:id', async (req, res) => {
 
 // Proxy-Konfiguration für '/api'
 app.use('/api', createProxyMiddleware({
-  target: 'http://34.224.26.26:8090',
+  target: 'http://localhost:8090',
   changeOrigin: true,
   pathRewrite: {
     '^/api': '', // Entfernt '/api' aus dem Anfragepfad
