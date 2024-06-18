@@ -12,7 +12,7 @@ const CreateUser = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('/user', {
+      const response = await fetch('http://34.224.26.26:8090/user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
