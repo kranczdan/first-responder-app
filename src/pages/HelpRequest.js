@@ -29,7 +29,7 @@ const HelpRequest = () => {
   const [eventType, setEventType] = useState(null);
 
   useEffect(() => {
-    const ws = new WebSocket('wss://34.224.26.26:3001');
+    const ws = new WebSocket('wss://34.224.26.26:29092');
 
     ws.onmessage = async (event) => {
       const parsedMessage = JSON.parse(event.data);
