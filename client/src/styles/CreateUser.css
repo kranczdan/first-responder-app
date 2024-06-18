@@ -1,0 +1,16 @@
+.custom-textfield .MuiInputBase-input {
+    color: white;
+  }
+  
+  .custom-textfield .MuiOutlinedInput-notchedOutline {
+    border-color: white;
+  }
+  
+  .custom-textfield .MuiInputLabel-root {
+    color: white;
+  }
+  
+  .custom-textfield .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: white;
+  }
+  

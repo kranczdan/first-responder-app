@@ -1,0 +1,84 @@
+/* HelpRequest.css */
+.help-request-container {
+  padding: 20px;
+  background: linear-gradient(45deg, darkblue, violet);
+  color: white;
+}
+
+.back-button {
+  display: block;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: darkblue;
+}
+
+/* Dropdown Border Color */
+.dropdown-primary-border .MuiOutlinedInput-notchedOutline {
+  border-color: white !important; /* Weiße Umrandung */
+}
+
+.dropdown-primary-border:hover .MuiOutlinedInput-notchedOutline {
+  border-color: white !important; /* Weiße Umrandung bei Hover */
+}
+
+.dropdown-primary-border.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: white !important; /* Weiße Umrandung bei Fokus */
+}
+
+/* Dropdown Text Color */
+.dropdown-white-text .MuiSelect-select,
+.dropdown-white-text .MuiInputBase-input {
+  color: white !important; /* Weiße Schrift */
+}
+
+/* Dropdown Icon Color */
+.dropdown-white-text .MuiSvgIcon-root {
+  color: white !important; /* Weiße Icon */
+}
+
+/* Dropdown MenuItem Text Color */
+.MuiListItem-root .MuiListItemText-primary
+{
+  color: white !important; /* Weiße Schrift für Menüelemente */
+}
+
+.MuiListItem-root .MuiListItemText-secondary
+{
+  color: white !important; /* Weiße Schrift für Menüelemente */
+  font-style: italic;
+}
+
+/* InputLabel Text Color */
+.dropdown-white-label .MuiInputLabel-root {
+  color: white !important; /* Weiße Beschriftung */
+}
+
+.dropdown-white-label .MuiInputLabel-root.Mui-focused {
+  color: white !important; /* Weiße Beschriftung bei Fokus */
+}
+
+.dropdown-white-label .MuiInputLabel-root.MuiFormLabel-filled {
+  color: white !important; /* Weiße Beschriftung wenn gefüllt */
+}
+
+/* Styles for Map */
+.map-container {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.user-info-container {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}

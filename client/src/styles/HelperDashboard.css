@@ -1,0 +1,41 @@
+/* Dropdown Border Color */
+.dropdown-primary-border .MuiOutlinedInput-notchedOutline {
+  border-color: white !important; /* Weiße Umrandung */
+}
+
+.dropdown-primary-border:hover .MuiOutlinedInput-notchedOutline {
+  border-color: white !important; /* Weiße Umrandung bei Hover */
+}
+
+.dropdown-primary-border.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: white !important; /* Weiße Umrandung bei Fokus */
+}
+
+/* Dropdown Text Color */
+.dropdown-white-text .MuiSelect-select,
+.dropdown-white-text .MuiInputBase-input {
+  color: white !important; /* Weiße Schrift */
+}
+
+/* Dropdown Icon Color */
+.dropdown-white-text .MuiSvgIcon-root {
+  color: white !important; /* Weiße Icon */
+}
+
+/* Dropdown MenuItem Text Color */
+.MuiListItem-root .MuiListItemText-primary {
+  color: white !important; /* Weiße Schrift für Menüelemente */
+}
+
+/* InputLabel Text Color */
+.dropdown-white-label .MuiInputLabel-root {
+  color: white !important; /* Weiße Beschriftung */
+}
+
+.dropdown-white-label .MuiInputLabel-root.Mui-focused {
+  color: white !important; /* Weiße Beschriftung bei Fokus */
+}
+
+.dropdown-white-label .MuiInputLabel-root.MuiFormLabel-filled {
+  color: white !important; /* Weiße Beschriftung wenn gefüllt */
+}
